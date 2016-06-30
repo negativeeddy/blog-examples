@@ -1,0 +1,12 @@
+﻿<Window x:Class="AsyncInfiniteLoops.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+        >
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" >
+            <Button x:Name="bttnStart" Width="50" Click="bttnStart_Click">Start</Button>
+        </StackPanel>
+        <TextBlock x:Name="txtTicks" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Bold"/>
+    </Grid>
+</Window>
