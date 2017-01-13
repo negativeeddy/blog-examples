@@ -1,0 +1,24 @@
+﻿<Window x:Class="ExtremeConfigAwaitWPFSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExtremeConfigAwaitWPFSample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="121.244" Width="238.937">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <WrapPanel Orientation="Horizontal">
+            <Button x:Name="bttnRunCase0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="bttnRun_Case0" >Run Case 0</Button>
+            <Button x:Name="bttnRunCase1" HorizontalAlignment="Left" VerticalAlignment="Top" Click="bttnRun_Case1" >Run Case 1</Button>
+            <Button x:Name="bttnRunCase2" HorizontalAlignment="Left" VerticalAlignment="Top" Click="bttnRun_Case2" >Run Case 2</Button>
+            <Button x:Name="bttnRunCase3" HorizontalAlignment="Left" VerticalAlignment="Top" Click="bttnRun_Case3" >Run Case 3</Button>
+            <Button x:Name="bttnRunCase4" HorizontalAlignment="Left" VerticalAlignment="Top" Click="bttnRun_Case4" >Run Case 4</Button>
+        </WrapPanel>
+        <TextBlock x:Name="txtTicks" Margin="5">0</TextBlock>
+    </StackPanel>
+</Window>
