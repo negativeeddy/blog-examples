@@ -7,7 +7,7 @@ namespace ExtremeConfigAwait
     {
         public async Task Run()
         {
-            // regular async calls
+            // regular async calls with no use of ConfigureAwait(false) 
             // will use the default synchronization context
             Diag.PrintContext("ENTER");
             await WorkWithoutCA();

@@ -16,11 +16,12 @@ namespace ExtremeConfigAwait
             var ctx = SynchronizationContext.Current;
             if (ctx != null)
             {
-                Console.WriteLine("{0}: {1} 0x{2:X8} TID:{3}", callerName, message, ctx.GetHashCode(), Thread.CurrentThread.ManagedThreadId);
+                
+                Console.WriteLine("{0}: {1} 0x{2:X8} TID:{3} TSCHED:0x{4}", callerName, message, ctx.GetHashCode(), Thread.CurrentThread.ManagedThreadId, TaskScheduler.Current);
             }
             else
             {
-                Console.WriteLine("{0}: {1} <NO CONTEXT> TID:{2}", callerName, message, Thread.CurrentThread.ManagedThreadId);
+                Console.WriteLine("{0}: {1} <NO CONTEXT> TID:{2} TSCHED:{3}", callerName, message, Thread.CurrentThread.ManagedThreadId, TaskScheduler.Current);
             }
         }
     }

@@ -25,10 +25,12 @@ namespace ExtremeConfigAwait
             if (ctx != null)
             {
                 Console.WriteLine("{0}:{1:D4} await context will be {2}:", callerName, line, ctx);
+                Console.WriteLine("    TSCHED:{0}", TaskScheduler.Current);
             }
             else
             {
                 Console.WriteLine("{0}:{1:D4} await context will be <NO CONTEXT>", callerName, line);
+                Console.WriteLine("    TSCHED:{0}", TaskScheduler.Current);
             }
         }
     }
