@@ -55,8 +55,10 @@ namespace AsyncIsNotParallel
 
                 var endTime = sw.ElapsedMilliseconds;
 
+                int threadId = Thread.CurrentThread.ManagedThreadId;
+
                 Dispatcher.BeginInvoke((Action)(() => AddTimeRectangle(
-                                                startTime, endTime, color, column)));
+                                                startTime, endTime, color, column, threadId)));
             }
         }
 
@@ -68,10 +70,10 @@ namespace AsyncIsNotParallel
         /// <param name="endTime"></param>
         /// <param name="color"></param>
         /// <param name="column"></param>
-        private void AddTimeRectangle(double startTime, double endTime, Color color, int column)
+        private void AddTimeRectangle(double startTime, double endTime, Color color, int column, int threadId)
         {
             const int columnWidth = 50;
-            Debug.WriteLine("Adding Rect {0} {1} {2}", startTime, endTime, color);
+            Debug.WriteLine("Adding Rect {0} {1} {2} from thread:{3}", startTime, endTime, color, threadId);
 
             double left = column * (columnWidth * 2 / 3);
             double height = endTime - startTime;
